@@ -5,7 +5,6 @@ import { useHotspotContext } from '@/contexts/HotspotContext'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { HotspotImage } from '@/components/HotspotImage'
 import { HotspotModal } from '@/components/HotspotModal'
-import { ErrorBanner } from '@/components/ErrorBanner'
 import { VisuallyHidden } from '@/components/VisuallyHidden'
 import { useI18n } from '@/contexts/I18nContext'
 
@@ -14,7 +13,7 @@ const PageWrapper = styled.main`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing.md};
+  padding: ${({ theme }) => theme.spacing.sm};
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.lg};
@@ -59,46 +58,6 @@ const Subtitle = styled.p`
   line-height: 1.5;
 `
 
-const ContentLayout = styled.section`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: ${({ theme }) => theme.spacing.lg};
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.lg}px`}) {
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-  }
-`
-
-const Sidebar = styled.aside`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
-`
-
-const SidebarCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.xs};
-  padding: ${({ theme }) => theme.spacing.md};
-  background: ${({ theme }) => theme.colors.surfaceElevated};
-  border-radius: 16px;
-  box-shadow: ${({ theme }) => theme.shadows.sm};
-`
-
-const SidebarHeading = styled.h2`
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.text};
-`
-
-const SidebarDescription = styled.p`
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: ${({ theme }) => theme.colors.textMuted};
-`
-
 const StatusAnnouncer = styled(VisuallyHidden).attrs({
   role: 'status',
   'aria-live': 'polite',
@@ -134,29 +93,7 @@ export const InteractiveHotspotPage = () => {
         <LanguageSwitcher />
       </Header>
 
-      <ContentLayout>
-        <div>
-          <HotspotImage />
-        </div>
-        <Sidebar aria-live="polite">
-          <ErrorBanner />
-          {status === 'loading' ? <Subtitle>{t('loadingData')}</Subtitle> : null}
-          {status === 'ready' && !selectedHotspot ? (
-            <Subtitle>{t('noHotspotSelected')}</Subtitle>
-          ) : null}
-          {status === 'ready' && selectedHotspot ? (
-            <SidebarCard>
-              <SidebarHeading>{selectedHotspot.title}</SidebarHeading>
-              <SidebarDescription>{selectedHotspot.description}</SidebarDescription>
-            </SidebarCard>
-          ) : null}
-          {status === 'ready' && updatedAt ? (
-            <SidebarDescription aria-live="polite">
-              {t('lastUpdated', new Date(updatedAt).toLocaleDateString())}
-            </SidebarDescription>
-          ) : null}
-        </Sidebar>
-      </ContentLayout>
+      <HotspotImage />
 
       <StatusAnnouncer>
         {status === 'loading'
@@ -177,7 +114,7 @@ export const InteractiveHotspotPage = () => {
       />
 
       <VisuallyHidden as="div" aria-live="polite">
-        {selectedHotspot ? selectedHotspot.title : t('noHotspotSelected')}
+        {selectedHotspot ? selectedHotspot.title : ''}
       </VisuallyHidden>
     </PageWrapper>
   )

@@ -14,30 +14,6 @@ type HotspotMarkerProps = {
   modalId: string
 }
 
-const severityStyles = {
-  low: css`
-    background: radial-gradient(
-      circle at center,
-      ${({ theme }) => theme.colors.primaryMuted} 0%,
-      ${({ theme }) => theme.colors.primary} 70%
-    );
-  `,
-  medium: css`
-    background: radial-gradient(
-      circle at center,
-      ${({ theme }) => theme.colors.warning} 0%,
-      ${({ theme }) => theme.colors.secondary} 70%
-    );
-  `,
-  high: css`
-    background: radial-gradient(
-      circle at center,
-      ${({ theme }) => theme.colors.danger} 0%,
-      ${({ theme }) => theme.colors.secondary} 70%
-    );
-  `,
-}
-
 const MarkerButton = styled.button<{
   $isActive: boolean
   $shape: Hotspot['shape']['type']
@@ -51,14 +27,13 @@ const MarkerButton = styled.button<{
   justify-content: center;
   border: none;
   cursor: pointer;
-  color: ${({ theme }) => theme.colors.text};
-  background: ${({ theme }) => theme.colors.secondary};
+  color: transparent;
+  background: transparent;
   padding: 0;
   transition:
     transform 120ms ease,
-    box-shadow 120ms ease,
     opacity 120ms ease;
-  box-shadow: ${({ theme }) => theme.shadows.md};
+  box-shadow: none;
   touch-action: manipulation;
 
   ${({ $shape, $borderRadius }) =>
@@ -77,48 +52,21 @@ const MarkerButton = styled.button<{
         `
       : undefined}
 
-  ${({ $severity }) =>
-    $severity
-      ? severityStyles[$severity]
-      : css`
-          background: radial-gradient(
-            circle at center,
-            ${({ theme }) => theme.colors.primaryMuted} 0%,
-            ${({ theme }) => theme.colors.primary} 70%
-          );
-        `}
-
   ${({ $isActive, theme }) =>
     $isActive &&
     css`
-      box-shadow: ${theme.shadows.lg};
       transform: scale(1.06);
+      box-shadow: ${theme.shadows.md};
     `}
 
   &:focus-visible {
-    outline: 3px solid ${({ theme }) => theme.colors.text};
+    outline: 3px solid ${({ theme }) => theme.colors.primary};
     outline-offset: 2px;
   }
 
   &:hover {
     transform: scale(1.05);
   }
-`
-
-const MarkerGlyph = styled.span<{ $isActive: boolean }>`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  height: 60%;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.35);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.text};
-  opacity: ${({ $isActive }) => ($isActive ? 1 : 0.9)};
 `
 
 export const HotspotMarker = memo(
@@ -134,8 +82,6 @@ export const HotspotMarker = memo(
     }
 
     const { left, top, width, height, clipPath } = layout
-    const shortLabel = hotspot.shortTitle ?? hotspot.title.slice(0, 3)
-
     return (
       <MarkerButton
         type="button"
@@ -158,7 +104,6 @@ export const HotspotMarker = memo(
           height,
         }}
       >
-        <MarkerGlyph $isActive={isActive}>{shortLabel}</MarkerGlyph>
         <VisuallyHidden>{hotspot.title}</VisuallyHidden>
       </MarkerButton>
     )

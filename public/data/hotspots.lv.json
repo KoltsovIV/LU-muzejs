@@ -9,11 +9,24 @@
       "description": "Ilgstošs darbs pie datora bez atpūtām palielina stresa hormonu līmeni un rada pārmērīgu nogurumu. Ieplānojiet mikropauzes, izkustieties ik pēc 45 minūtēm un izmantojiet elpošanas vingrinājumus.",
       "ariaLabel": "Informācija par garīgo nogurumu",
       "coords": {
-        "default": { "anchor": "center", "x": 36, "y": 30 },
-        "md": { "anchor": "center", "x": 36, "y": 32 }
+        "default": {
+          "anchor": "center",
+          "x": 16,
+          "y": 19
+        },
+        "md": {
+          "anchor": "center",
+          "x": 16,
+          "y": 19
+        }
       },
-      "shape": { "type": "circle", "radius": 5 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "circle",
+        "radius": 5
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["psychological", "organizational"],
       "severity": "medium",
       "links": [
@@ -30,11 +43,26 @@
       "description": "Pārāk spilgts ekrāns un nepietiekams mirkšķināšanas biežums izraisa acu sausumu. Regulējiet ekrāna spožumu, izmantojiet 20-20-20 noteikumu un pārbaudiet ergonomisko attālumu.",
       "ariaLabel": "Informācija par acu sasprindzinājumu",
       "coords": {
-        "default": { "anchor": "center", "x": 60, "y": 34 },
-        "md": { "anchor": "center", "x": 60, "y": 35 }
+        "default": {
+          "anchor": "center",
+          "x": 39,
+          "y": 19
+        },
+        "md": {
+          "anchor": "center",
+          "x": 39,
+          "y": 19
+        }
       },
-      "shape": { "type": "rectangle", "width": 12, "height": 7, "borderRadius": 2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "rectangle",
+        "width": 12,
+        "height": 7,
+        "borderRadius": 2
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics", "environment"],
       "severity": "medium"
     },
@@ -45,19 +73,41 @@
       "description": "Monitoru vajadzētu novietot acu līmenī, lai izvairītos no galvas noliekšanas. Izmantojiet regulējamu monitoru statīvu un nostipriniet plecu joslu ar spēka vingrinājumiem.",
       "ariaLabel": "Informācija par kakla sasprindzinājumu",
       "coords": {
-        "default": { "anchor": "center", "x": 44, "y": 42 },
-        "md": { "anchor": "center", "x": 44, "y": 43 }
+        "default": {
+          "anchor": "center",
+          "x": 62,
+          "y": 19
+        },
+        "md": {
+          "anchor": "center",
+          "x": 62,
+          "y": 19
+        }
       },
       "shape": {
         "type": "polygon",
         "points": [
-          { "x": -6, "y": -8 },
-          { "x": 6, "y": -8 },
-          { "x": 10, "y": 6 },
-          { "x": -10, "y": 6 }
+          {
+            "x": -6,
+            "y": -8
+          },
+          {
+            "x": 6,
+            "y": -8
+          },
+          {
+            "x": 10,
+            "y": 6
+          },
+          {
+            "x": -10,
+            "y": 6
+          }
         ]
       },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics"],
       "severity": "medium"
     },
@@ -68,11 +118,24 @@
       "description": "Nepareiza roku pozīcija izraisa plecu un kakla pārspriegumu. Pielāgojiet roku balstus tā, lai pleci būtu atslābināti un elkoņi veidotu 90° leņķi.",
       "ariaLabel": "Informācija par plecu noslodzi",
       "coords": {
-        "default": { "anchor": "center", "x": 49, "y": 48 },
-        "md": { "anchor": "center", "x": 49, "y": 50 }
+        "default": {
+          "anchor": "center",
+          "x": 84,
+          "y": 19
+        },
+        "md": {
+          "anchor": "center",
+          "x": 84,
+          "y": 19
+        }
       },
-      "shape": { "type": "circle", "radius": 4 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "circle",
+        "radius": 4
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics"],
       "severity": "medium"
     },
@@ -83,11 +146,26 @@
       "description": "Pareiza krēsla kontūra un regulējams atzveltnes izliekums novērš muguras sāpes. Pārbaudiet krēsla regulāciju un izmantojiet papildu spilvenu, ja nepieciešams.",
       "ariaLabel": "Informācija par muguras atbalstu",
       "coords": {
-        "default": { "anchor": "center", "x": 38, "y": 57 },
-        "md": { "anchor": "center", "x": 38, "y": 59 }
+        "default": {
+          "anchor": "center",
+          "x": 16,
+          "y": 50
+        },
+        "md": {
+          "anchor": "center",
+          "x": 16,
+          "y": 50
+        }
       },
-      "shape": { "type": "rectangle", "width": 11, "height": 10, "borderRadius": 3 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "rectangle",
+        "width": 11,
+        "height": 10,
+        "borderRadius": 3
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics", "physical"],
       "severity": "high"
     },
@@ -98,11 +176,24 @@
       "description": "Nepareiza plaukstu pozīcija rada karpālā kanāla sindroma risku. Novietojiet tastatūru un peli vienā līmenī, izmantojiet polsterētu balstu un ievērojiet neitrālu roku pozīciju.",
       "ariaLabel": "Informācija par plaukstu atbalstu",
       "coords": {
-        "default": { "anchor": "center", "x": 56, "y": 55 },
-        "md": { "anchor": "center", "x": 56, "y": 56 }
+        "default": {
+          "anchor": "center",
+          "x": 39,
+          "y": 50
+        },
+        "md": {
+          "anchor": "center",
+          "x": 39,
+          "y": 50
+        }
       },
-      "shape": { "type": "circle", "radius": 3.2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "circle",
+        "radius": 3.2
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics", "physical"],
       "severity": "medium"
     },
@@ -113,11 +204,26 @@
       "description": "Tastatūrai jāatrodas tieši priekšā, lai izvairītos no rumpja pagriešanas. Saglabājiet 10–15 cm attālumu līdz krūtīm un izmantojiet klaviatūras slīpuma regulāciju.",
       "ariaLabel": "Informācija par tastatūras izvietojumu",
       "coords": {
-        "default": { "anchor": "center", "x": 60, "y": 60 },
-        "md": { "anchor": "center", "x": 60, "y": 61 }
+        "default": {
+          "anchor": "center",
+          "x": 62,
+          "y": 50
+        },
+        "md": {
+          "anchor": "center",
+          "x": 62,
+          "y": 50
+        }
       },
-      "shape": { "type": "rectangle", "width": 14, "height": 6, "borderRadius": 2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "rectangle",
+        "width": 14,
+        "height": 6,
+        "borderRadius": 2
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics"],
       "severity": "medium"
     },
@@ -128,11 +234,24 @@
       "description": "Pelei jāatrodas tuvu ķermenim, lai samazinātu plecu un elkoņa slodzi. Izmantojiet vertikālu peli vai mainiet roku, ja jūtat diskomfortu.",
       "ariaLabel": "Informācija par peles sasniedzamību",
       "coords": {
-        "default": { "anchor": "center", "x": 67, "y": 58 },
-        "md": { "anchor": "center", "x": 67, "y": 60 }
+        "default": {
+          "anchor": "center",
+          "x": 84,
+          "y": 50
+        },
+        "md": {
+          "anchor": "center",
+          "x": 84,
+          "y": 50
+        }
       },
-      "shape": { "type": "circle", "radius": 3.8 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "circle",
+        "radius": 3.8
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics"],
       "severity": "medium"
     },
@@ -143,11 +262,26 @@
       "description": "Ilgstoša sēdēšana ar saliektiem ceļiem var samazināt asins plūsmu. Izmantojiet dinamisku kāju balstu un ieturiet aktīvas pauzes.",
       "ariaLabel": "Informācija par kāju asinsriti",
       "coords": {
-        "default": { "anchor": "center", "x": 46, "y": 72 },
-        "md": { "anchor": "center", "x": 46, "y": 73 }
+        "default": {
+          "anchor": "center",
+          "x": 16,
+          "y": 81
+        },
+        "md": {
+          "anchor": "center",
+          "x": 16,
+          "y": 81
+        }
       },
-      "shape": { "type": "rectangle", "width": 12, "height": 8, "borderRadius": 3 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "rectangle",
+        "width": 12,
+        "height": 8,
+        "borderRadius": 3
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["physical"],
       "severity": "medium"
     },
@@ -158,11 +292,24 @@
       "description": "Fiksēts balsts palīdz uzturēt ceļus 90° leņķī un atslogo muguru. Pielāgojiet augstumu tā, lai papēži pilnībā balstītos uz virsmas.",
       "ariaLabel": "Informācija par kāju balstu",
       "coords": {
-        "default": { "anchor": "center", "x": 32, "y": 72 },
-        "md": { "anchor": "center", "x": 32, "y": 73 }
+        "default": {
+          "anchor": "center",
+          "x": 39,
+          "y": 81
+        },
+        "md": {
+          "anchor": "center",
+          "x": 39,
+          "y": 81
+        }
       },
-      "shape": { "type": "circle", "radius": 4.2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "shape": {
+        "type": "circle",
+        "radius": 4.2
+      },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics"],
       "severity": "low"
     },
@@ -173,19 +320,41 @@
       "description": "Sēdekļa augstumam jānodrošina 90–100° leņķis ceļu locītavās. Regulāri pārbaudiet hidraulisko mehānismu un materiāla nolietojumu.",
       "ariaLabel": "Informācija par krēsla augstumu",
       "coords": {
-        "default": { "anchor": "center", "x": 35, "y": 64 },
-        "md": { "anchor": "center", "x": 35, "y": 65 }
+        "default": {
+          "anchor": "center",
+          "x": 62,
+          "y": 81
+        },
+        "md": {
+          "anchor": "center",
+          "x": 62,
+          "y": 81
+        }
       },
       "shape": {
         "type": "polygon",
         "points": [
-          { "x": -6, "y": -6 },
-          { "x": 6, "y": -6 },
-          { "x": 10, "y": 6 },
-          { "x": -10, "y": 6 }
+          {
+            "x": -6,
+            "y": -6
+          },
+          {
+            "x": 6,
+            "y": -6
+          },
+          {
+            "x": 10,
+            "y": 6
+          },
+          {
+            "x": -10,
+            "y": 6
+          }
         ]
       },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
+      },
       "categories": ["ergonomics"],
       "severity": "medium"
     },
@@ -196,261 +365,28 @@
       "description": "Atspīdumi padara tekstu grūti salasāmu un izraisa acu nogurumu. Izmantojiet aizkarus, matētu ekrāna plēvi un izvairieties no tiešas gaismas avotu novietošanas aiz muguras.",
       "ariaLabel": "Informācija par ekrāna atspīdumiem",
       "coords": {
-        "default": { "anchor": "center", "x": 64, "y": 26 },
-        "md": { "anchor": "center", "x": 64, "y": 27 }
-      },
-      "shape": { "type": "rectangle", "width": 14, "height": 8, "borderRadius": 2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["environment"],
-      "severity": "medium"
-    },
-    {
-      "id": "monitor-distance",
-      "title": "Monitoru attālums",
-      "shortTitle": "Attālums",
-      "description": "Optimālais attālums no acīm līdz ekrānam ir 50–70 cm. Ja izmantojat divus monitorus, novietojiet primāro tieši priekšā un sekundāro nedaudz sānis.",
-      "ariaLabel": "Informācija par monitoru attālumu",
-      "coords": {
-        "default": { "anchor": "center", "x": 58, "y": 32 },
-        "md": { "anchor": "center", "x": 58, "y": 33 }
-      },
-      "shape": { "type": "rectangle", "width": 12, "height": 6, "borderRadius": 2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["ergonomics"],
-      "severity": "low"
-    },
-    {
-      "id": "air-quality",
-      "title": "Gaisa kvalitāte",
-      "shortTitle": "Ventilācija",
-      "description": "Nepietiekama ventilācija rada miegainību un galvassāpes. Regulāri vēdiniet telpu, izmantojiet gaisa kvalitātes sensoru un uzturiet telpu tīru no putekļiem.",
-      "ariaLabel": "Informācija par gaisa kvalitāti",
-      "coords": {
-        "default": { "anchor": "center", "x": 86, "y": 32 },
-        "md": { "anchor": "center", "x": 86, "y": 33 }
-      },
-      "shape": { "type": "circle", "radius": 4.5 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["environment"],
-      "severity": "medium"
-    },
-    {
-      "id": "temperature",
-      "title": "Temperatūras kontrole",
-      "shortTitle": "Temperatūra",
-      "description": "Pārāk auksta vai karsta vide samazina koncentrēšanās spējas. Uzturiet 21–23°C un izvairieties no tieša aukstā gaisa plūsmas.",
-      "ariaLabel": "Informācija par temperatūras kontroli",
-      "coords": {
-        "default": { "anchor": "center", "x": 92, "y": 38 },
-        "md": { "anchor": "center", "x": 92, "y": 39 }
-      },
-      "shape": { "type": "circle", "radius": 4 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["environment"],
-      "severity": "medium"
-    },
-    {
-      "id": "humidity",
-      "title": "Gaisa mitrums",
-      "shortTitle": "Mitrums",
-      "description": "Zems mitrums izraisa sausu ādu un rīkles iekaisumu. Izmantojiet mitruma mērītāju un, ja nepieciešams, mitrinātāju ar regulāru filtru maiņu.",
-      "ariaLabel": "Informācija par gaisa mitrumu",
-      "coords": {
-        "default": { "anchor": "center", "x": 88, "y": 44 },
-        "md": { "anchor": "center", "x": 88, "y": 45 }
-      },
-      "shape": { "type": "circle", "radius": 3.6 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["environment"],
-      "severity": "low"
-    },
-    {
-      "id": "noise-level",
-      "title": "Trokšņa līmenis",
-      "shortTitle": "Trokšņi",
-      "description": "Pastāvīgs troksnis ietekmē koncentrēšanos. Izmantojiet troksni slāpējošas austiņas, veiciet skaņas izolācijas pasākumus vai pārvietojiet skaļus ierīces prom.",
-      "ariaLabel": "Informācija par trokšņa līmeni",
-      "coords": {
-        "default": { "anchor": "center", "x": 82, "y": 50 },
-        "md": { "anchor": "center", "x": 82, "y": 51 }
-      },
-      "shape": { "type": "circle", "radius": 3.8 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["environment", "psychological"],
-      "severity": "medium"
-    },
-    {
-      "id": "cable-management",
-      "title": "Vadu organizēšana",
-      "shortTitle": "Vadi",
-      "description": "Haotisks vadu izvietojums ir paklupšanas risks un ugunsdrošības apdraudējums. Izmantojiet kabeļu kanālus, marķēšanu un pārslēdziet nepievienotas ierīces.",
-      "ariaLabel": "Informācija par vadu organizēšanu",
-      "coords": {
-        "default": { "anchor": "center", "x": 59, "y": 68 },
-        "md": { "anchor": "center", "x": 59, "y": 69 }
+        "default": {
+          "anchor": "center",
+          "x": 84,
+          "y": 81
+        },
+        "md": {
+          "anchor": "center",
+          "x": 84,
+          "y": 81
+        }
       },
       "shape": {
-        "type": "polygon",
-        "points": [
-          { "x": -7, "y": -4 },
-          { "x": 7, "y": -4 },
-          { "x": 10, "y": 4 },
-          { "x": -10, "y": 4 }
-        ]
+        "type": "rectangle",
+        "width": 14,
+        "height": 8,
+        "borderRadius": 2
       },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["organizational", "other"],
-      "severity": "low"
-    },
-    {
-      "id": "lighting",
-      "title": "Darba vietas apgaismojums",
-      "shortTitle": "Apgaismojums",
-      "description": "Nepietiekams apgaismojums rada redzes sasprindzinājumu. Kombinējiet dabisko un mākslīgo apgaismojumu, izmantojiet regulējamu galda lampu ar silto spektru.",
-      "ariaLabel": "Informācija par apgaismojumu",
-      "coords": {
-        "default": { "anchor": "center", "x": 72, "y": 24 },
-        "md": { "anchor": "center", "x": 72, "y": 25 }
+      "media": {
+        "image": "/assets/hotspots/icons/info.svg"
       },
-      "shape": { "type": "circle", "radius": 3.5 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
       "categories": ["environment"],
       "severity": "medium"
-    },
-    {
-      "id": "break-reminders",
-      "title": "Paužu atgādinājumi",
-      "shortTitle": "Pauzes",
-      "description": "Regulāras pauzes samazina traumu risku un paaugstina produktivitāti. Izmantojiet atgādinājumus telefonā vai datorā, ieplānojiet īsus stiepšanās starplaikus.",
-      "ariaLabel": "Informācija par paužu atgādinājumiem",
-      "coords": {
-        "default": { "anchor": "center", "x": 16, "y": 24 },
-        "md": { "anchor": "center", "x": 16, "y": 26 }
-      },
-      "shape": { "type": "circle", "radius": 4 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["organizational", "psychological"],
-      "severity": "medium"
-    },
-    {
-      "id": "document-holder",
-      "title": "Dokumentu turētājs",
-      "shortTitle": "Dokumenti",
-      "description": "Dokumentu turētājs acu līmenī samazina pārmērīgu skatiena pārisināšanu. Izmantojiet horizontālu statīvu starp tastatūru un monitoru.",
-      "ariaLabel": "Informācija par dokumentu turētāju",
-      "coords": {
-        "default": { "anchor": "center", "x": 50, "y": 46 },
-        "md": { "anchor": "center", "x": 50, "y": 47 }
-      },
-      "shape": { "type": "rectangle", "width": 10, "height": 6, "borderRadius": 2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["ergonomics"],
-      "severity": "low"
-    },
-    {
-      "id": "posture-alert",
-      "title": "Stājas kontrole",
-      "shortTitle": "Stāja",
-      "description": "Bioloģiskās atgriezeniskās saites ierīces palīdz uzraudzīt stāju. Apsveriet sensorus vai viedos krēslu spilvenus ar vibrācijas atgādinājumiem.",
-      "ariaLabel": "Informācija par stājas kontroli",
-      "coords": {
-        "default": { "anchor": "center", "x": 42, "y": 52 },
-        "md": { "anchor": "center", "x": 42, "y": 54 }
-      },
-      "shape": { "type": "circle", "radius": 3.4 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["ergonomics", "physical"],
-      "severity": "medium"
-    },
-    {
-      "id": "stress-management",
-      "title": "Stresa pārvaldība",
-      "shortTitle": "Stress",
-      "description": "Plānojiet darba slodzi, izmantojiet prioritāšu matricu un runājiet par slodzi ar vadītāju. Prakses kā mindfulness un īsas meditācijas palīdz mazināt spriedzi.",
-      "ariaLabel": "Informācija par stresa pārvaldību",
-      "coords": {
-        "default": { "anchor": "center", "x": 22, "y": 18 },
-        "md": { "anchor": "center", "x": 22, "y": 20 }
-      },
-      "shape": { "type": "circle", "radius": 4.4 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["psychological", "organizational"],
-      "severity": "high"
-    },
-    {
-      "id": "evacuation-plan",
-      "title": "Evakuācijas plāns",
-      "shortTitle": "Drošība",
-      "description": "Pārliecinieties, ka evakuācijas shēma ir redzamā vietā un pieejama visiem. Organizējiet regulāras mācības un atjaunojiet kontaktpersonu sarakstu.",
-      "ariaLabel": "Informācija par evakuācijas plānu",
-      "coords": {
-        "default": { "anchor": "center", "x": 94, "y": 68 },
-        "md": { "anchor": "center", "x": 94, "y": 69 }
-      },
-      "shape": { "type": "rectangle", "width": 10, "height": 8, "borderRadius": 2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["organizational", "other"],
-      "severity": "medium"
-    },
-    {
-      "id": "fire-safety",
-      "title": "Ugunsdrošība",
-      "shortTitle": "Ugunsdrošība",
-      "description": "Ugunsdzēšamajiem aparātiem jābūt pārbaudītiem un viegli pieejamiem. Neaizsedziet evakuācijas ceļus un atvienojiet ierīces darba dienas beigās.",
-      "ariaLabel": "Informācija par ugunsdrošību",
-      "coords": {
-        "default": { "anchor": "center", "x": 90, "y": 62 },
-        "md": { "anchor": "center", "x": 90, "y": 63 }
-      },
-      "shape": { "type": "circle", "radius": 3.6 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["other"],
-      "severity": "medium"
-    },
-    {
-      "id": "first-aid",
-      "title": "Pirmās palīdzības komplekts",
-      "shortTitle": "Pirmā palīdzība",
-      "description": "Pirmās palīdzības komplektam jābūt papildinātam un viegli atrodamam. Regulāri pārskatiet derīguma termiņus un informējiet komandu par atrašanās vietu.",
-      "ariaLabel": "Informācija par pirmās palīdzības komplektu",
-      "coords": {
-        "default": { "anchor": "center", "x": 18, "y": 32 },
-        "md": { "anchor": "center", "x": 18, "y": 33 }
-      },
-      "shape": { "type": "circle", "radius": 3.6 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["other"],
-      "severity": "medium"
-    },
-    {
-      "id": "data-security",
-      "title": "Datu drošība",
-      "shortTitle": "Datu drošība",
-      "description": "Izmantojiet divu faktoru autentifikāciju, šifrētas paroles un bloķējiet ekrānu, atstājot darba vietu. Regulāri veiciet piekļuves pārbaudes.",
-      "ariaLabel": "Informācija par datu drošību",
-      "coords": {
-        "default": { "anchor": "center", "x": 68, "y": 40 },
-        "md": { "anchor": "center", "x": 68, "y": 41 }
-      },
-      "shape": { "type": "circle", "radius": 3.5 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["organizational", "other"],
-      "severity": "medium"
-    },
-    {
-      "id": "software-ergonomics",
-      "title": "Programmatūras ergonomika",
-      "shortTitle": "Programmas",
-      "description": "Automatizējiet atkārtotus uzdevumus un izmantojiet īsinājumtaustiņus, lai samazinātu klikšķu skaitu. Konfigurējiet darba vidi atbilstoši individuālajām vajadzībām.",
-      "ariaLabel": "Informācija par programmatūras ergonomiku",
-      "coords": {
-        "default": { "anchor": "center", "x": 63, "y": 46 },
-        "md": { "anchor": "center", "x": 63, "y": 47 }
-      },
-      "shape": { "type": "rectangle", "width": 12, "height": 6, "borderRadius": 2 },
-      "media": { "image": "/assets/hotspots/icons/info.svg" },
-      "categories": ["organizational"],
-      "severity": "low"
     }
   ]
 }

@@ -61,7 +61,7 @@ scripts/
 
 ## Hotspot Data Model
 
-Hotspots are stored per locale in `public/data/hotspots.<lang>.json`. Each file must contain **at least 24** entries with matching IDs across languages. Key fields include:
+Hotspots are stored per locale in `public/data/hotspots.<lang>.json`. Each file must contain **at least 12** entries with matching IDs across languages. Key fields include:
 
 - `id`, `title`, `description`, `ariaLabel`
 - `coords`: percentages with optional breakpoint overrides (`default`, `sm`, `md`, etc.)

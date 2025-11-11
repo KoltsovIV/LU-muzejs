@@ -3,7 +3,7 @@ const baseTranslations = {
     languageLabel: 'English',
     pageTitle: 'Interactive risk map',
     pageSubtitle:
-      'Explore 24 workplace risk zones. Tap a marker to learn about ergonomic, environmental and organizational safety tips.',
+      'Explore 12 workplace risk zones. Tap a marker to learn about ergonomic, environmental and organizational safety tips.',
     loading: 'Loading workspace…',
     loadingData: 'Loading hotspots',
     loadingImage: 'Preparing visual…',
@@ -27,7 +27,7 @@ const baseTranslations = {
     languageLabel: 'Latviešu',
     pageTitle: 'Interaktīvā risku karte',
     pageSubtitle:
-      'Iepazīstiet 24 darba vides risku zonas. Pieskarieties punktam, lai uzzinātu ergonomikas, vides un organizatoriskos drošības padomus.',
+      'Iepazīstiet 12 darba vides risku zonas. Pieskarieties punktam, lai uzzinātu ergonomikas, vides un organizatoriskos drošības padomus.',
     loading: 'Notiek darba vides ielāde…',
     loadingData: 'Ielādējam interaktīvos punktus',
     loadingImage: 'Sagatavojam ilustrāciju…',

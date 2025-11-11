@@ -1,11 +1,9 @@
 import { useRef } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-import { useI18n } from '@/contexts/I18nContext'
 import { HotspotMarker } from '@/components/HotspotMarker'
 import { useElementSize } from '@/hooks/useElementSize'
 import { useHotspotContext } from '@/contexts/HotspotContext'
-import { useIsTouchDevice } from '@/hooks/useIsTouchDevice'
 
 const WorkspaceWrapper = styled.div<{ $busy: boolean }>`
   position: relative;
@@ -86,37 +84,7 @@ const LoadingText = styled.span`
   text-align: center;
 `
 
-const MarkerCountBadge = styled.div<{ $persistent: boolean }>`
-  position: absolute;
-  top: ${({ theme }) => theme.spacing.sm};
-  right: ${({ theme }) => theme.spacing.sm};
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.45);
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 0.75rem;
-  font-weight: 600;
-  pointer-events: none;
-  opacity: ${({ $persistent }) => ($persistent ? 1 : 0)};
-  transform: ${({ $persistent }) => ($persistent ? 'translateY(0)' : 'translateY(-6px)')};
-  transition:
-    opacity 250ms ease,
-    transform 250ms ease;
-
-  ${({ $persistent }) =>
-    !$persistent
-      ? css`
-          ${WorkspaceWrapper}:hover &,
-          ${WorkspaceWrapper}:focus-within & {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        `
-      : undefined}
-`
-
 export const HotspotImage = () => {
-  const { t } = useI18n()
   const {
     hotspots,
     selectedHotspotId,
@@ -127,8 +95,6 @@ export const HotspotImage = () => {
   } = useHotspotContext()
   const containerRef = useRef<HTMLDivElement | null>(null)
   const size = useElementSize(containerRef.current)
-  const isTouch = useIsTouchDevice()
-
   const isReady = status === 'ready' && imageStatus === 'loaded'
   const showOverlay = !isReady
 
@@ -140,7 +106,7 @@ export const HotspotImage = () => {
       $busy={!isReady}
     >
       <WorkspaceImage
-        src="/assets/hotspots/workspace-scene.svg"
+        src="/assets/hotspots/Background.png"
         alt=""
         aria-hidden
         draggable={false}
@@ -159,21 +125,18 @@ export const HotspotImage = () => {
           />
         ))}
       </MarkerLayer>
-      <MarkerCountBadge $persistent={isTouch}>
-        {t('hotspotsCounter', hotspots.length)}
-      </MarkerCountBadge>
       <ProgressContainer
         $visible={showOverlay}
         aria-hidden={isReady}
         aria-live="polite"
-        aria-label={t('indicatorLabel')}
+        aria-label="Workspace loading progress"
       >
         <LoadingText>
           {imageStatus === 'error'
-            ? t('errorLoadingImage')
+            ? 'Image failed to load'
             : status === 'loading'
-              ? t('loadingData')
-              : t('loadingImage')}
+              ? 'Loading hotspots'
+              : 'Preparing visual…'}
         </LoadingText>
         {imageStatus === 'error' ? null : (
           <ProgressBar $progress={loadingProgress} role="progressbar" />

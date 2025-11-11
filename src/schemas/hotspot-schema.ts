@@ -92,7 +92,7 @@ export const hotspotSchema = z.object({
 export const hotspotDataFileSchema = z.object({
   language: z.string().min(2),
   updatedAt: z.string().min(4),
-  hotspots: z.array(hotspotSchema).min(24),
+  hotspots: z.array(hotspotSchema).min(12),
 })
 
 export type HotspotShapeSchema = z.infer<typeof hotspotShapeSchema>

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, type KeyboardEvent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import type { Hotspot } from '@/types/hotspot'
 import { useI18n } from '@/contexts/I18nContext'
@@ -32,7 +32,7 @@ const DialogOverlay = styled.div<{ $isOpen: boolean }>`
 
 const DialogContainer = styled.div<{ $isOpen: boolean }>`
   position: relative;
-  width: min(720px, 100%);
+  width: min(880px, 100%);
   max-height: calc(100vh - 2 * ${({ theme }) => theme.spacing.lg});
   background: ${({ theme }) => theme.colors.surface};
   color: ${({ theme }) => theme.colors.text};
@@ -50,33 +50,18 @@ const DialogContainer = styled.div<{ $isOpen: boolean }>`
   }
 `
 
-const DialogHeader = styled.div`
-  padding: ${({ theme }) =>
-    `${theme.spacing.lg} ${theme.spacing.lg} ${theme.spacing.sm}`};
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.xs};
-`
-
-const DialogTitle = styled.h2`
-  margin: 0;
-  font-size: 1.35rem;
-  line-height: 1.3;
-  font-weight: 600;
-`
-
-const DialogMeta = styled.span`
-  font-size: 0.85rem;
-  color: ${({ theme }) => theme.colors.textMuted};
-`
-
 const DialogBody = styled.div`
   padding: ${({ theme }) =>
     `${theme.spacing.sm} ${theme.spacing.lg} ${theme.spacing.lg}`};
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.spacing.md};
+  gap: ${({ theme }) => theme.spacing.lg};
   overflow-y: auto;
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.md}px`}) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `
 
 const Description = styled.p`
@@ -156,37 +141,6 @@ const CloseButton = styled.button`
 const ScrollArea = styled.div`
   overflow-y: auto;
   max-height: 100%;
-`
-
-const SeverityPill = styled.span<{ $severity?: Hotspot['severity'] }>`
-  align-self: flex-start;
-  padding: 0.3rem 0.65rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background: ${({ theme }) => theme.colors.surfaceElevated};
-
-  ${({ $severity, theme }) => {
-    switch ($severity) {
-      case 'low':
-        return css`
-          color: ${theme.colors.success};
-        `
-      case 'medium':
-        return css`
-          color: ${theme.colors.warning};
-        `
-      case 'high':
-        return css`
-          color: ${theme.colors.danger};
-        `
-      default:
-        return css`
-          color: ${theme.colors.textMuted};
-        `
-    }
-  }}
 `
 
 const trapFocus = (event: KeyboardEvent<HTMLElement>, modal: HTMLElement) => {
@@ -274,7 +228,7 @@ export const HotspotModal = ({
   )
 
   const metaLine = useMemo(() => {
-    if (!hotspot?.categories?.length) return null
+    if (!hotspot?.categories?.length) return ''
     return hotspot.categories.join(' · ')
   }, [hotspot])
 
@@ -296,33 +250,35 @@ export const HotspotModal = ({
         onKeyDown={handleKeyDown}
         onClick={event => event.stopPropagation()}
       >
-        <DialogHeader>
-          {hotspot?.severity ? (
-            <SeverityPill $severity={hotspot.severity}>{hotspot.severity}</SeverityPill>
-          ) : null}
-          <DialogTitle id={`${modalId}-title`}>{hotspot?.title ?? ''}</DialogTitle>
-          {metaLine ? <DialogMeta>{metaLine}</DialogMeta> : null}
-          {updatedAt ? <DialogMeta>{t('lastUpdated', updatedAt)}</DialogMeta> : null}
-        </DialogHeader>
         <CloseButton type="button" onClick={close} data-close aria-label={t('close')}>
           ×
         </CloseButton>
         <ScrollArea>
           <DialogBody id={`${modalId}-description`}>
-            <Description>{hotspot?.description ?? t('noHotspotSelected')}</Description>
-            {hotspot?.categories?.length ? (
-              <CategoryList>
-                {hotspot.categories.map(category => (
-                  <CategoryTag key={category}>{category}</CategoryTag>
-                ))}
-              </CategoryList>
-            ) : null}
-            {hotspot?.links && hotspot.links.length > 0 ? (
-              <LinkSection links={hotspot.links} />
-            ) : null}
-            {hotspot?.media?.image ? (
-              <ImagePreview src={hotspot.media.image} alt={hotspot.title} />
-            ) : null}
+            <div>
+              <ImagePreview src={DETAIL_IMAGE_PATH} alt={hotspot?.title ?? ''} />
+            </div>
+            <DetailContent>
+              <HeadingStack>
+                {hotspot?.severity ? (
+                  <SeverityPill $tone={hotspot.severity}>{hotspot.severity}</SeverityPill>
+                ) : null}
+                <DetailTitle id={`${modalId}-title`}>{hotspot?.title ?? ''}</DetailTitle>
+                {metaLine ? <MetaLine>{metaLine}</MetaLine> : null}
+                {updatedAt ? <MetaLine>{t('lastUpdated', updatedAt)}</MetaLine> : null}
+              </HeadingStack>
+              <Description>{hotspot?.description ?? t('noHotspotSelected')}</Description>
+              {hotspot?.categories?.length ? (
+                <CategoryList>
+                  {hotspot.categories.map(category => (
+                    <CategoryTag key={category}>{category}</CategoryTag>
+                  ))}
+                </CategoryList>
+              ) : null}
+              {hotspot?.links && hotspot.links.length > 0 ? (
+                <LinkSection links={hotspot.links} />
+              ) : null}
+            </DetailContent>
           </DialogBody>
         </ScrollArea>
       </DialogContainer>
@@ -347,18 +303,59 @@ const LinkSection = ({ links }: { links: NonNullable<Hotspot['links']> }) => {
   )
 }
 
-const ImagePreview = ({ src, alt }: { src: string; alt: string }) => (
-  <picture>
-    <img
-      src={src}
-      alt={alt}
-      style={{
-        width: '100%',
-        borderRadius: 16,
-        border: '1px solid rgba(255,255,255,0.08)',
-      }}
-      loading="lazy"
-      decoding="async"
-    />
-  </picture>
-)
+const DetailContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.md};
+  position: relative;
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.md}px`}) {
+    flex: 1;
+  }
+`
+
+const HeadingStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.xs};
+`
+
+const SeverityPill = styled.span<{ $tone?: Hotspot['severity'] }>`
+  align-self: flex-start;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  color: ${({ theme, $tone }) => {
+    if ($tone === 'high') return theme.colors.danger
+    if ($tone === 'medium') return theme.colors.warning
+    if ($tone === 'low') return theme.colors.success
+    return theme.colors.textMuted
+  }};
+`
+
+const DetailTitle = styled.h2`
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 600;
+`
+
+const MetaLine = styled.span`
+  font-size: 0.85rem;
+  color: ${({ theme }) => theme.colors.textMuted};
+`
+
+const ImagePreview = styled.img`
+  width: 100%;
+  max-width: 320px;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  flex-shrink: 0;
+`
+
+const DETAIL_IMAGE_PATH = '/assets/hotspots/.jne_itme.png'
