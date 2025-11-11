@@ -61,7 +61,7 @@ scripts/
 
 ## Hotspot Data Model
 
-Hotspots are stored per locale in `public/data/hotspots.<lang>.json`. Each file must contain **at least 12** entries with matching IDs across languages. Key fields include:
+Hotspots are stored per locale in `public/data/hotspots.<lang>.json`. Each file must contain **exactly 12** entries with matching IDs across languages. Key fields include:
 
 - `id`, `title`, `description`, `ariaLabel`
 - `coords`: percentages with optional breakpoint overrides (`default`, `sm`, `md`, etc.)
@@ -113,12 +113,13 @@ Extend `createLogger` if you need to forward messages to an external telemetry v
 2. Build with `npm run build`. The output in `dist/` can be uploaded to static hosting (e.g., LU infrastructure, GitHub Pages, Netlify).
 3. Include `/public` assets when deploying so hotspot images and JSON files remain accessible.
 
-For GitHub-based deployments, configure your CI/CD pipeline to:
+### GitHub Pages
 
-- Install dependencies (`npm ci`)
-- Run `npm run check`
-- Run `npm run build`
-- Publish the `dist` directory to the target host
+- Production builds use the `/LU-muzejs/` base path (configured in `vite.config.ts`) so assets resolve correctly on GitHub Pages.
+- The workflow at `.github/workflows/deploy.yml` automatically lints, tests, builds, and publishes the `dist/` folder to GitHub Pages whenever changes land on `main`.
+- After the first successful run, the site will be available at `https://koltsoviv.github.io/LU-muzejs/`.
+
+If you deploy elsewhere, adjust the `base` value or set `NODE_ENV` appropriately before running `vite build`.
 
 ## Storybook Usage
 
