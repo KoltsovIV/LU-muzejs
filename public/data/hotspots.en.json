@@ -1,0 +1,456 @@
+{
+  "language": "en",
+  "updatedAt": "2025-02-11T08:00:00Z",
+  "hotspots": [
+    {
+      "id": "mind-fatigue",
+      "title": "Mental fatigue",
+      "shortTitle": "Fatigue",
+      "description": "Working long hours without recovery raises stress hormones and drains energy. Schedule micro breaks, move every 45 minutes, and use guided breathing routines.",
+      "ariaLabel": "Details about mental fatigue",
+      "coords": {
+        "default": { "anchor": "center", "x": 36, "y": 30 },
+        "md": { "anchor": "center", "x": 36, "y": 32 }
+      },
+      "shape": { "type": "circle", "radius": 5 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["psychological", "organizational"],
+      "severity": "medium",
+      "links": [
+        {
+          "label": "Breathing routines",
+          "href": "https://example.com/breathing"
+        }
+      ]
+    },
+    {
+      "id": "eye-strain",
+      "title": "Eye strain",
+      "shortTitle": "Eye comfort",
+      "description": "High screen brightness and reduced blinking cause dry eyes. Calibrate brightness, follow the 20-20-20 rule, and keep an ergonomic viewing distance.",
+      "ariaLabel": "Details about eye strain",
+      "coords": {
+        "default": { "anchor": "center", "x": 60, "y": 34 },
+        "md": { "anchor": "center", "x": 60, "y": 35 }
+      },
+      "shape": { "type": "rectangle", "width": 12, "height": 7, "borderRadius": 2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics", "environment"],
+      "severity": "medium"
+    },
+    {
+      "id": "neck-tension",
+      "title": "Neck tension",
+      "shortTitle": "Neck posture",
+      "description": "Keep the top of the monitor at eye level to prevent tilting. Use an adjustable monitor arm and strengthen shoulder muscles with targeted exercises.",
+      "ariaLabel": "Details about neck tension",
+      "coords": {
+        "default": { "anchor": "center", "x": 44, "y": 42 },
+        "md": { "anchor": "center", "x": 44, "y": 43 }
+      },
+      "shape": {
+        "type": "polygon",
+        "points": [
+          { "x": -6, "y": -8 },
+          { "x": 6, "y": -8 },
+          { "x": 10, "y": 6 },
+          { "x": -10, "y": 6 }
+        ]
+      },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "medium"
+    },
+    {
+      "id": "shoulder-load",
+      "title": "Shoulder load",
+      "shortTitle": "Shoulder balance",
+      "description": "Incorrect arm placement overloads shoulders and neck. Adjust armrests so shoulders stay relaxed and elbows keep a 90° angle.",
+      "ariaLabel": "Details about shoulder load",
+      "coords": {
+        "default": { "anchor": "center", "x": 49, "y": 48 },
+        "md": { "anchor": "center", "x": 49, "y": 50 }
+      },
+      "shape": { "type": "circle", "radius": 4 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "medium"
+    },
+    {
+      "id": "lumbar-support",
+      "title": "Lumbar support",
+      "shortTitle": "Back support",
+      "description": "Chair contour and adjustable lumbar support reduce back pain. Review chair settings and add a cushion if the lower back is not supported.",
+      "ariaLabel": "Details about lumbar support",
+      "coords": {
+        "default": { "anchor": "center", "x": 38, "y": 57 },
+        "md": { "anchor": "center", "x": 38, "y": 59 }
+      },
+      "shape": { "type": "rectangle", "width": 11, "height": 10, "borderRadius": 3 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics", "physical"],
+      "severity": "high"
+    },
+    {
+      "id": "wrist-alignment",
+      "title": "Wrist alignment",
+      "shortTitle": "Wrists",
+      "description": "Neutral wrist posture lowers the risk of carpal tunnel. Keep keyboard and mouse level, add a padded rest, and avoid bending the wrist upwards.",
+      "ariaLabel": "Details about wrist alignment",
+      "coords": {
+        "default": { "anchor": "center", "x": 56, "y": 55 },
+        "md": { "anchor": "center", "x": 56, "y": 56 }
+      },
+      "shape": { "type": "circle", "radius": 3.2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics", "physical"],
+      "severity": "medium"
+    },
+    {
+      "id": "keyboard-alignment",
+      "title": "Keyboard alignment",
+      "shortTitle": "Keyboard",
+      "description": "Keep the keyboard centered to avoid rotating the torso. Maintain a 10–15 cm gap to the chest and tune the tilt angle for comfort.",
+      "ariaLabel": "Details about keyboard alignment",
+      "coords": {
+        "default": { "anchor": "center", "x": 60, "y": 60 },
+        "md": { "anchor": "center", "x": 60, "y": 61 }
+      },
+      "shape": { "type": "rectangle", "width": 14, "height": 6, "borderRadius": 2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "medium"
+    },
+    {
+      "id": "mouse-reach",
+      "title": "Mouse reach",
+      "shortTitle": "Mouse",
+      "description": "Keep the mouse close to reduce shoulder and elbow load. Try an upright mouse or switch hands when discomfort appears.",
+      "ariaLabel": "Details about mouse reach",
+      "coords": {
+        "default": { "anchor": "center", "x": 67, "y": 58 },
+        "md": { "anchor": "center", "x": 67, "y": 60 }
+      },
+      "shape": { "type": "circle", "radius": 3.8 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "medium"
+    },
+    {
+      "id": "leg-circulation",
+      "title": "Leg circulation",
+      "shortTitle": "Leg position",
+      "description": "Sitting with bent knees for long periods restricts blood flow. Use an active footrest and plan movement breaks.",
+      "ariaLabel": "Details about leg circulation",
+      "coords": {
+        "default": { "anchor": "center", "x": 46, "y": 72 },
+        "md": { "anchor": "center", "x": 46, "y": 73 }
+      },
+      "shape": { "type": "rectangle", "width": 12, "height": 8, "borderRadius": 3 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["physical"],
+      "severity": "medium"
+    },
+    {
+      "id": "footrest",
+      "title": "Footrest support",
+      "shortTitle": "Footrest",
+      "description": "A stable support helps keep knees at a 90° angle and relieves the lower back. Adjust the height until heels rest fully on the surface.",
+      "ariaLabel": "Details about footrest support",
+      "coords": {
+        "default": { "anchor": "center", "x": 32, "y": 72 },
+        "md": { "anchor": "center", "x": 32, "y": 73 }
+      },
+      "shape": { "type": "circle", "radius": 4.2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "low"
+    },
+    {
+      "id": "chair-height",
+      "title": "Chair height",
+      "shortTitle": "Chair adjustments",
+      "description": "Seat height should keep knees at a 90–100° angle. Inspect the hydraulic mechanism regularly and replace worn padding.",
+      "ariaLabel": "Details about chair height",
+      "coords": {
+        "default": { "anchor": "center", "x": 35, "y": 64 },
+        "md": { "anchor": "center", "x": 35, "y": 65 }
+      },
+      "shape": {
+        "type": "polygon",
+        "points": [
+          { "x": -6, "y": -6 },
+          { "x": 6, "y": -6 },
+          { "x": 10, "y": 6 },
+          { "x": -10, "y": 6 }
+        ]
+      },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "medium"
+    },
+    {
+      "id": "screen-glare",
+      "title": "Screen glare",
+      "shortTitle": "Glare",
+      "description": "Glare makes text hard to read and strains eyes. Use curtains, apply matte screen filters, and avoid direct light sources behind you.",
+      "ariaLabel": "Details about screen glare",
+      "coords": {
+        "default": { "anchor": "center", "x": 64, "y": 26 },
+        "md": { "anchor": "center", "x": 64, "y": 27 }
+      },
+      "shape": { "type": "rectangle", "width": 14, "height": 8, "borderRadius": 2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["environment"],
+      "severity": "medium"
+    },
+    {
+      "id": "monitor-distance",
+      "title": "Monitor distance",
+      "shortTitle": "Distance",
+      "description": "Keep a 50–70 cm viewing distance. Place the primary monitor directly in front and the secondary slightly angled to the side.",
+      "ariaLabel": "Details about monitor distance",
+      "coords": {
+        "default": { "anchor": "center", "x": 58, "y": 32 },
+        "md": { "anchor": "center", "x": 58, "y": 33 }
+      },
+      "shape": { "type": "rectangle", "width": 12, "height": 6, "borderRadius": 2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "low"
+    },
+    {
+      "id": "air-quality",
+      "title": "Air quality",
+      "shortTitle": "Ventilation",
+      "description": "Poor ventilation leads to headaches and drowsiness. Air the room frequently, use quality sensors, and keep surfaces dust-free.",
+      "ariaLabel": "Details about air quality",
+      "coords": {
+        "default": { "anchor": "center", "x": 86, "y": 32 },
+        "md": { "anchor": "center", "x": 86, "y": 33 }
+      },
+      "shape": { "type": "circle", "radius": 4.5 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["environment"],
+      "severity": "medium"
+    },
+    {
+      "id": "temperature",
+      "title": "Temperature control",
+      "shortTitle": "Temperature",
+      "description": "Excessive cold or heat lowers focus. Maintain 21–23°C and avoid direct cold airflow.",
+      "ariaLabel": "Details about temperature control",
+      "coords": {
+        "default": { "anchor": "center", "x": 92, "y": 38 },
+        "md": { "anchor": "center", "x": 92, "y": 39 }
+      },
+      "shape": { "type": "circle", "radius": 4 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["environment"],
+      "severity": "medium"
+    },
+    {
+      "id": "humidity",
+      "title": "Humidity control",
+      "shortTitle": "Humidity",
+      "description": "Low humidity dries eyes and throat. Track humidity levels and use a humidifier with regular filter changes.",
+      "ariaLabel": "Details about humidity control",
+      "coords": {
+        "default": { "anchor": "center", "x": 88, "y": 44 },
+        "md": { "anchor": "center", "x": 88, "y": 45 }
+      },
+      "shape": { "type": "circle", "radius": 3.6 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["environment"],
+      "severity": "low"
+    },
+    {
+      "id": "noise-level",
+      "title": "Noise level",
+      "shortTitle": "Noise",
+      "description": "Persistent noise impacts attention. Use noise-cancelling headphones or relocate noisy devices when possible.",
+      "ariaLabel": "Details about noise level",
+      "coords": {
+        "default": { "anchor": "center", "x": 82, "y": 50 },
+        "md": { "anchor": "center", "x": 82, "y": 51 }
+      },
+      "shape": { "type": "circle", "radius": 3.8 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["environment", "psychological"],
+      "severity": "medium"
+    },
+    {
+      "id": "cable-management",
+      "title": "Cable management",
+      "shortTitle": "Cables",
+      "description": "Messy cables create trip hazards and fire risks. Use cable trays, label power supplies, and disconnect unused devices.",
+      "ariaLabel": "Details about cable management",
+      "coords": {
+        "default": { "anchor": "center", "x": 59, "y": 68 },
+        "md": { "anchor": "center", "x": 59, "y": 69 }
+      },
+      "shape": {
+        "type": "polygon",
+        "points": [
+          { "x": -7, "y": -4 },
+          { "x": 7, "y": -4 },
+          { "x": 10, "y": 4 },
+          { "x": -10, "y": 4 }
+        ]
+      },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["organizational", "other"],
+      "severity": "low"
+    },
+    {
+      "id": "lighting",
+      "title": "Workspace lighting",
+      "shortTitle": "Lighting",
+      "description": "Insufficient lighting stresses vision. Combine natural and task lighting, and use an adjustable warm-spectrum desk lamp.",
+      "ariaLabel": "Details about workspace lighting",
+      "coords": {
+        "default": { "anchor": "center", "x": 72, "y": 24 },
+        "md": { "anchor": "center", "x": 72, "y": 25 }
+      },
+      "shape": { "type": "circle", "radius": 3.5 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["environment"],
+      "severity": "medium"
+    },
+    {
+      "id": "break-reminders",
+      "title": "Break reminders",
+      "shortTitle": "Breaks",
+      "description": "Routine breaks lower injury risks and boost productivity. Set reminders on your devices and plan quick stretch sessions.",
+      "ariaLabel": "Details about break reminders",
+      "coords": {
+        "default": { "anchor": "center", "x": 16, "y": 24 },
+        "md": { "anchor": "center", "x": 16, "y": 26 }
+      },
+      "shape": { "type": "circle", "radius": 4 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["organizational", "psychological"],
+      "severity": "medium"
+    },
+    {
+      "id": "document-holder",
+      "title": "Document holder",
+      "shortTitle": "Documents",
+      "description": "An eye-level document holder reduces excessive head movement. Place a horizontal stand between the keyboard and monitor.",
+      "ariaLabel": "Details about document holder",
+      "coords": {
+        "default": { "anchor": "center", "x": 50, "y": 46 },
+        "md": { "anchor": "center", "x": 50, "y": 47 }
+      },
+      "shape": { "type": "rectangle", "width": 10, "height": 6, "borderRadius": 2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics"],
+      "severity": "low"
+    },
+    {
+      "id": "posture-alert",
+      "title": "Posture alert",
+      "shortTitle": "Posture",
+      "description": "Biofeedback tools help maintain neutral posture. Consider sensors or smart cushions that vibrate when posture drifts.",
+      "ariaLabel": "Details about posture alert",
+      "coords": {
+        "default": { "anchor": "center", "x": 42, "y": 52 },
+        "md": { "anchor": "center", "x": 42, "y": 54 }
+      },
+      "shape": { "type": "circle", "radius": 3.4 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["ergonomics", "physical"],
+      "severity": "medium"
+    },
+    {
+      "id": "stress-management",
+      "title": "Stress management",
+      "shortTitle": "Stress",
+      "description": "Plan workloads, use priority matrices, and discuss bottlenecks with your lead. Mindfulness and short meditations ease tension.",
+      "ariaLabel": "Details about stress management",
+      "coords": {
+        "default": { "anchor": "center", "x": 22, "y": 18 },
+        "md": { "anchor": "center", "x": 22, "y": 20 }
+      },
+      "shape": { "type": "circle", "radius": 4.4 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["psychological", "organizational"],
+      "severity": "high"
+    },
+    {
+      "id": "evacuation-plan",
+      "title": "Evacuation plan",
+      "shortTitle": "Safety",
+      "description": "Keep the evacuation scheme visible and accessible. Run regular drills and update emergency contact lists.",
+      "ariaLabel": "Details about evacuation plan",
+      "coords": {
+        "default": { "anchor": "center", "x": 94, "y": 68 },
+        "md": { "anchor": "center", "x": 94, "y": 69 }
+      },
+      "shape": { "type": "rectangle", "width": 10, "height": 8, "borderRadius": 2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["organizational", "other"],
+      "severity": "medium"
+    },
+    {
+      "id": "fire-safety",
+      "title": "Fire safety",
+      "shortTitle": "Fire safety",
+      "description": "Keep fire extinguishers inspected and accessible. Do not block exits and power down equipment at the end of the day.",
+      "ariaLabel": "Details about fire safety",
+      "coords": {
+        "default": { "anchor": "center", "x": 90, "y": 62 },
+        "md": { "anchor": "center", "x": 90, "y": 63 }
+      },
+      "shape": { "type": "circle", "radius": 3.6 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["other"],
+      "severity": "medium"
+    },
+    {
+      "id": "first-aid",
+      "title": "First-aid kit",
+      "shortTitle": "First aid",
+      "description": "Keep the kit stocked and easy to find. Review expiry dates and remind the team where to locate supplies.",
+      "ariaLabel": "Details about first-aid kit",
+      "coords": {
+        "default": { "anchor": "center", "x": 18, "y": 32 },
+        "md": { "anchor": "center", "x": 18, "y": 33 }
+      },
+      "shape": { "type": "circle", "radius": 3.6 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["other"],
+      "severity": "medium"
+    },
+    {
+      "id": "data-security",
+      "title": "Data security",
+      "shortTitle": "Data security",
+      "description": "Use multi-factor authentication, strong passwords, and lock the screen when leaving the desk. Audit access rights regularly.",
+      "ariaLabel": "Details about data security",
+      "coords": {
+        "default": { "anchor": "center", "x": 68, "y": 40 },
+        "md": { "anchor": "center", "x": 68, "y": 41 }
+      },
+      "shape": { "type": "circle", "radius": 3.5 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["organizational", "other"],
+      "severity": "medium"
+    },
+    {
+      "id": "software-ergonomics",
+      "title": "Software ergonomics",
+      "shortTitle": "Software",
+      "description": "Automate repetitive tasks and use shortcuts to lower click counts. Configure software layouts to match personal workflows.",
+      "ariaLabel": "Details about software ergonomics",
+      "coords": {
+        "default": { "anchor": "center", "x": 63, "y": 46 },
+        "md": { "anchor": "center", "x": 63, "y": 47 }
+      },
+      "shape": { "type": "rectangle", "width": 12, "height": 6, "borderRadius": 2 },
+      "media": { "image": "/assets/hotspots/icons/info.svg" },
+      "categories": ["organizational"],
+      "severity": "low"
+    }
+  ]
+}
