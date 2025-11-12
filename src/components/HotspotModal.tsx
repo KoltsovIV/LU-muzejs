@@ -359,4 +359,4 @@ const ImagePreview = styled.img`
   flex-shrink: 0;
 `
 
-const DETAIL_IMAGE_PATH = '/assets/hotspots/.jne_itme.png'
+const DETAIL_IMAGE_PATH = `${import.meta.env.BASE_URL}assets/hotspots/.jne_itme.png`

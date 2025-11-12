@@ -19,8 +19,9 @@ import { useLogger } from '@/utils/logger'
 type HotspotStatus = 'idle' | 'loading' | 'ready' | 'error'
 type ImageStatus = 'idle' | 'loading' | 'loaded' | 'error'
 
-const WORKSPACE_IMAGE_SRC = '/assets/hotspots/workspace-scene.svg'
-const DATA_ENDPOINT = '/data'
+const BASE_URL = import.meta.env.BASE_URL ?? '/'
+const WORKSPACE_IMAGE_SRC = `${BASE_URL}assets/hotspots/workspace-scene.svg`
+const DATA_ENDPOINT = `${BASE_URL}data`
 const MAX_RETRIES = 2
 
 type HotspotContextValue = {

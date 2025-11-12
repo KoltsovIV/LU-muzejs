@@ -84,6 +84,8 @@ const LoadingText = styled.span`
   text-align: center;
 `
 
+const IMAGE_SRC = `${import.meta.env.BASE_URL}assets/hotspots/Background.png`
+
 export const HotspotImage = () => {
   const {
     hotspots,
@@ -106,7 +108,7 @@ export const HotspotImage = () => {
       $busy={!isReady}
     >
       <WorkspaceImage
-        src="/assets/hotspots/Background.png"
+        src={IMAGE_SRC}
         alt=""
         aria-hidden
         draggable={false}
