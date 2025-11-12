@@ -90,9 +90,7 @@ export const I18nProvider = ({ children }: { children: ReactNode }) => {
     ): TranslationReturn<K> => {
       const entry = dictionary[key]
       if (typeof entry === 'function') {
-        return (entry as (...args: TranslationParams<K>) => TranslationReturn<K>)(
-          ...params,
-        )
+        return (entry as (...args: unknown[]) => TranslationReturn<K>)(...params)
       }
       return entry as TranslationReturn<K>
     },

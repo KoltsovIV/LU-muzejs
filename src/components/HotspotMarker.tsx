@@ -10,7 +10,7 @@ type HotspotMarkerProps = {
   hotspot: Hotspot
   containerSize: { width: number; height: number }
   isActive: boolean
-  onSelect: (id: string) => void
+  onSelect: (id: string | null) => void
   modalId: string
 }
 

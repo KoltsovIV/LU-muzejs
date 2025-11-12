@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useMemo, useRef, type KeyboardEvent } from 'react'
+import { useCallback, useEffect, useMemo, useRef } from 'react'
+import type { KeyboardEvent as ReactKeyboardEvent } from 'react'
 import styled from 'styled-components'
 
 import type { Hotspot } from '@/types/hotspot'
@@ -143,7 +144,7 @@ const ScrollArea = styled.div`
   max-height: 100%;
 `
 
-const trapFocus = (event: KeyboardEvent<HTMLElement>, modal: HTMLElement) => {
+const trapFocus = (event: ReactKeyboardEvent<HTMLElement>, modal: HTMLElement) => {
   if (event.key !== 'Tab') {
     return
   }
@@ -199,23 +200,23 @@ export const HotspotModal = ({
 
     focusCloseButton()
 
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleDocumentKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault()
         close()
       }
     }
 
-    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('keydown', handleDocumentKeyDown)
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('keydown', handleDocumentKeyDown)
       previousActive?.focus()
     }
   }, [isOpen, close])
 
   const handleKeyDown = useCallback(
-    (event: KeyboardEvent<HTMLElement>) => {
+    (event: ReactKeyboardEvent<HTMLElement>) => {
       if (!dialogRef.current) return
       if (event.key === 'Escape') {
         event.preventDefault()

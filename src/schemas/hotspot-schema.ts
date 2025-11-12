@@ -4,18 +4,8 @@ export const hotspotAnchorSchema = z.enum(['center', 'top-left'])
 
 export const coordsSchema = z.object({
   anchor: hotspotAnchorSchema,
-  x: z
-    .number({
-      required_error: 'coords.x is required',
-    })
-    .min(0)
-    .max(100),
-  y: z
-    .number({
-      required_error: 'coords.y is required',
-    })
-    .min(0)
-    .max(100),
+  x: z.number().min(0).max(100),
+  y: z.number().min(0).max(100),
 })
 
 export const responsiveCoordsSchema = z
