@@ -22,6 +22,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -36,6 +39,9 @@ jobs:
 
       - name: Run tests
         run: npm run test
+
+      - name: Validate hotspot data
+        run: npm run validate:data
 
       - name: Build project
         run: npm run build
