@@ -54,19 +54,14 @@ const DialogContainer = styled.div<{ $isOpen: boolean }>`
 const DialogBody = styled.div`
   padding: ${({ theme }) =>
     `${theme.spacing.sm} ${theme.spacing.lg} ${theme.spacing.lg}`};
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: ${({ theme }) => theme.spacing.lg};
   overflow-y: auto;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.md}px`}) {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  @media (min-width: ${({ theme }) =>
-      `${theme.breakpoints.md}px`}) and (max-height: 720px) {
-    flex-direction: column;
+    grid-template-columns: minmax(0, clamp(220px, 35vw, 320px)) minmax(0, 1fr);
+    align-items: start;
   }
 `
 
@@ -315,6 +310,7 @@ const DetailContent = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.md};
   position: relative;
+  min-width: 0;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.md}px`}) {
     flex: 1;
@@ -360,7 +356,7 @@ const ImagePreview = styled.img`
   width: 100%;
   max-width: 320px;
   height: auto;
-  max-height: min(320px, 40vh);
+  max-height: clamp(180px, 35vh, 320px);
   border-radius: 20px;
   border: none;
   display: block;
