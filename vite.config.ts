@@ -15,9 +15,9 @@ const dirname =
 const enableStorybookTests = process.env.RUN_STORYBOOK_TESTS === 'true'
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/LU-muzejs/' : '/',
+  base: mode === 'production' ? '/LU-muzejs/' : '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -58,4 +58,4 @@ export default defineConfig({
         ]
       : undefined,
   },
-})
+}))
