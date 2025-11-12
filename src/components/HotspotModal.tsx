@@ -63,6 +63,11 @@ const DialogBody = styled.div`
     flex-direction: row;
     align-items: flex-start;
   }
+
+  @media (min-width: ${({ theme }) =>
+      `${theme.breakpoints.md}px`}) and (max-height: 720px) {
+    flex-direction: column;
+  }
 `
 
 const Description = styled.p`
@@ -354,6 +359,8 @@ const MetaLine = styled.span`
 const ImagePreview = styled.img`
   width: 100%;
   max-width: 320px;
+  height: auto;
+  max-height: min(320px, 40vh);
   border-radius: 20px;
   border: none;
   display: block;
