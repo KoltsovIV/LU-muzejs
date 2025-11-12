@@ -116,6 +116,7 @@ const CloseButton = styled.button`
   position: absolute;
   top: ${({ theme }) => theme.spacing.sm};
   right: ${({ theme }) => theme.spacing.sm};
+  z-index: 2;
   width: 40px;
   height: 40px;
   border-radius: 999px;
